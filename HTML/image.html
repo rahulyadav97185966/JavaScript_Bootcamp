@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Images in HTML</title>
+  </head>
+  <body>
+    <img usemap="#image-map" src="./image/Capture.jpg" alt="Result Image" />
+    <map name="image-map">
+        <area target="" alt="" onclick="myfun()" title="" href="" coords="28,157,231,128" shape="rect">
+        <area target="" alt="" onclick="myfun2()" title="" href="" coords="35,668,165,681" shape="rect">
+    </map>
+    <script>
+        function myfun(){
+            alert("You clicked first");
+        }
+        function myfun2(){
+            alert("You clicked Second Cord");
+        }
+    </script>
+  </body>
+</html>
