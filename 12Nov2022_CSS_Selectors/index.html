@@ -5,55 +5,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
     <style>
-     
       /* universal selector */
-      
+      * {
+        background-color: grey;
+        color: #ffffff;
+        margin: 10px;
+      }
       /* individual selector */
-      
+      p {
+        background-color: rgb(204, 225, 63);
+      }
+      li {
+        color: crimson;
+      }
       /* class and id selector */
-      
+      .bg-black {
+        background-color: rgb(122, 8, 150);
+        color: #ffffff;
+      }
+      #Awesom {
+        background-color: black;
+        text-align: center;
+        text-decoration: solid;
+        border-radius: 30px;
+      }
       /* and selector (chained) */
-      
+      /* So we have two classes named as bg-black but we want to give properties to those which are having the text-white also */
+      li.bg-black.text-white {
+        background-color: #fff;
+        color: black;
+        text-align: left;
+      }
+      /* we can also write like 
+      .bg-black.text-white */
+      .bg-black {
+        text-align: center;
+      }
+      .bg-black#item3 {
+        color: deeppink;
+      }
       /* combined selector */
-      
+      span,
+      p {
+        background-color: aqua;
+        color: rgb(212, 106, 0);
+      }
 
       /* inside an element */
-      
+      div ul li {
+        color: #fff;
+        border: 2px solid black;
+        align-items: baseline;
+      }
+      /* We can also write like div>ul>li */
+
       /* direct child */
-      
+      div > li {
+        background-color: rgb(137, 20, 20);
+        color: rgb(210, 191, 191);
+        border-radius: 50px;
+      }
 
       /* sibling  ~ or + */
-      
+      .sibling + p {
+        background-color: rgb(167, 30, 30);
+      }
     </style>
   </head>
   <body>
     <div>Welcome to This Website</div>
-    <span>Span is just a span, nothing more</span>
-    <p>We all know paragraph</p>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet sed,
+      incidunt tenetur ducimus facilis, dolore nulla esse quod illo consequuntur
+      autem?</span>
+    <p>heyy, Thanks For coming on this website</p>
     <ul>
       <li class="bg-black text-white">item1</li>
-      <li >item2</li>
-      <li >item3</li>
-      <li >item4</li>
+      <li class="bg-black">item2</li>
+      <li class="bg-black" id="item3">item3</li>
+      <li>item4</li>
       <li>item5</li>
     </ul>
 
     <div>
       <p>lorem</p>
-      <li>awesome</li>
+      <li id="Awesom">awesome</li>
       <ul>
-        <li>highlight me </li>
+        <li>highlight me</li>
         <li>highlight me</li>
       </ul>
     </div>
 
     <section>
       <p class="sibling">Test 1</p>
-      <p >Test 2</p>
+      <p>Test 2</p>
       <p>Test 3</p>
-      <p >Test 4</p>
+      <p class="sibling">Test 4</p>
       <p>Test 5</p>
     </section>
   </body>
