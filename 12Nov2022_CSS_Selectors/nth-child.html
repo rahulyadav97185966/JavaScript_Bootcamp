@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>nth-child</title>
+    <style>
+      h2 {
+        text-align: center;
+      }
+      h4 {
+        margin-left: 40px;
+      }
+      /* This will select all even child */
+      .EvenClass li:nth-child(even) {
+        width: 100px;
+        border: 2px solid green;
+        color: green;
+      }
+      /* This will select all odd child */
+      .OddClass li:nth-child(odd) {
+        width: 100px;
+        border: 2px solid orange;
+        color: orange;
+      }
+      .functional li:nth-child(3n + 1) {
+        width: 100px;
+        border: 2px solid red;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>This is for showing the nth-child()</h2>
+    <div class="EvenClass">
+      <h4>Even List</h4>
+      <ul>
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+        <li>Fourth</li>
+        <li>Fifth</li>
+        <li>Sixth</li>
+        <li>Seventh</li>
+        <li>Eight</li>
+      </ul>
+    </div>
+    <div class="OddClass">
+      <h4>Odd List</h4>
+      <ul>
+        <li>First ODD</li>
+        <li>Second ODD</li>
+        <li>Third ODD</li>
+        <li>Fourth ODD</li>
+        <li>Fifth ODD</li>
+        <li>Sixth ODD</li>
+        <li>Seventh ODD</li>
+        <li>Eight ODD</li>
+      </ul>
+    </div>
+    <div class="functional">
+      <h4>Functional Nth-child()</h4>
+      <ul>
+        <li>Function 1</li>
+        <li>Function 2</li>
+        <li>Function 3</li>
+        <li>Function 4</li>
+        <li>Function 5</li>
+        <li>Function 6</li>
+        <li>Function 7</li>
+        <li>Function 8</li>
+      </ul>
+    </div>
+  </body>
+</html>
